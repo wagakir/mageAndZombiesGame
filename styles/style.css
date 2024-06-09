@@ -1,0 +1,63 @@
+
+*{margin: 0;
+padding: 0;
+ }
+body{
+    height: 100%;
+    overflow: clip;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    min-height: fit-content;
+    min-width: fit-content;
+    background: greenyellow;
+    width: 100%;
+
+}
+.line{
+    width: 100%;
+    background: darkolivegreen;
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: fit-content;
+    min-width: fit-content;
+    overflow: auto;
+}
+.cell{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 2px solid black;
+
+
+
+    z-index: 1;
+}
+.emoji {
+
+    font-family: Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,Android Emoji,EmojiSymbols,EmojiOne Mozilla,Twemoji Mozilla,Segoe UI Symbol,Noto Color Emoji,EmojiOne Color,emoji;
+}
+
+.emoji-large {
+    height: 30px;
+    width: 30px;
+    font-size: 2rem
+}
+.gifAttack{
+    animation: ani 0.2s forwards;
+    position: absolute;
+    margin: -150px -150px;
+    z-index: 9999999;
+    height: 320px;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
