@@ -43,7 +43,7 @@ for (let i = 0; i < 20; i++){
 for (let i = 0; i < 120; i++){
     fieldArray[getRandomInt(20)][getRandomInt(20)][1] = 'wall'
 
-    fieldArray[getRandomInt(25)+4][getRandomInt(25)+4][1] = 'enemy'
+    fieldArray[getRandomInt(15)+4][getRandomInt(15)+4][1] = 'enemy'
 
 }
 
