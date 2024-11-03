@@ -12,10 +12,10 @@ let player = {
 let counter = 0;
 let fieldArray = []
 field = document.querySelector('.field')
-for (let i = 0; i < 30; i++){
+for (let i = 0; i < 20; i++){
     let lineArray = []
 
-    for (let j = 0; j <30; j++){
+    for (let j = 0; j <20; j++){
         // for (let k = 0; k <2; k++){
         //
         // }
@@ -41,13 +41,13 @@ for (let i = 0; i < 30; i++){
 
 }
 for (let i = 0; i < 120; i++){
-    fieldArray[getRandomInt(30)][getRandomInt(30)][1] = 'wall'
+    fieldArray[getRandomInt(20)][getRandomInt(20)][1] = 'wall'
 
     fieldArray[getRandomInt(25)+4][getRandomInt(25)+4][1] = 'enemy'
 
 }
 
-fieldArray[getRandomInt(3)+26][getRandomInt(3)+26][1]= 'exit'
+fieldArray[getRandomInt(3)+16][getRandomInt(3)+16][1]= 'exit'
 fieldArray[player.positionVertical][player.positionHorizontal][1] = 'sorcerer'
 function drawing() {
         fieldArray.forEach((element, i)=> {
@@ -101,7 +101,7 @@ drawing()
 
     }
     if(direction === 'right'
-        && player.positionHorizontal !== 29
+        && player.positionHorizontal !== 19
         && fieldArray[player.positionVertical][player.positionHorizontal+1][1] !== 'wall'
         && fieldArray[player.positionVertical][player.positionHorizontal+1][1] !== 'exit'){
         fieldArray[player.positionVertical][player.positionHorizontal][1] = 'space'
@@ -117,7 +117,7 @@ drawing()
         fieldArray[player.positionVertical][player.positionHorizontal][1] = 'sorcerer'
     }
     if(direction === 'down'
-        && player.positionVertical !== 29
+        && player.positionVertical !== 19
         && fieldArray[player.positionVertical+1][player.positionHorizontal][1] !== 'wall'
         && fieldArray[player.positionVertical+1][player.positionHorizontal][1] !== 'exit'
     ){
@@ -188,7 +188,7 @@ document.onkeydown = function (key){
         for (let i = -2; i < 3; i++){
             for (let j = -2; j < 3; j++) {
                 let xyz = Math.abs(i) + Math.abs(j)
-                if ((player.positionVertical + i)>=0 && (player.positionVertical + i)<=29 &&(player.positionHorizontal + j)>=0 &&(player.positionHorizontal + j)<=2929){
+                if ((player.positionVertical + i)>=0 && (player.positionVertical + i)<=19 &&(player.positionHorizontal + j)>=0 &&(player.positionHorizontal + j)<=2929){
                     if (xyz<3 && fieldArray[player.positionVertical+i][player.positionHorizontal+j][1] ==='enemy'){
                         fieldArray[player.positionVertical+i][player.positionHorizontal+j][0].setAttribute('style', 'background: red')
                         fieldArray[player.positionVertical+i][player.positionHorizontal+j][1] = 'space'
